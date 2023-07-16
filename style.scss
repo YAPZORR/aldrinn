@@ -1,0 +1,118 @@
+.app-download {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    direction: rtl;
+    background-color: #dc1e4d;
+    top: 0;
+    position: fixed;
+    flex-direction: column;
+    z-index: 100;
+    left: 2rem;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    box-shadow: 1px 2px 14px 5px #00000070;
+    padding: 1rem;
+    &:focus {
+      outline: none;
+    }
+    label{
+      margin-top: .5rem;
+      margin-bottom: .5rem;
+      color: #fff;
+      cursor: pointer;
+      &#first-title {
+        font-size: 1rem;
+      }  
+      &#second-title{
+        font-size:.8rem;
+      }
+    }
+    
+    .fa-mobile-phone {
+      color: #fff;
+      font-size: 2.5rem;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      border: 2px dotted #fff;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: .5rem 0;
+      cursor: pointer;
+    }
+    .close-download-app {
+      color: #fff;
+      margin-top: .5rem;
+      font-size: .7rem;
+      cursor: pointer;
+    }
+  }
+
+.bounce {
+animation: bounce 0.5s;
+animation-direction: alternate;
+animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+animation-iteration-count: infinite;
+-webkit-animation-name: bounce;
+-webkit-animation-duration: 0.5s;
+-webkit-animation-direction: alternate;
+-webkit-animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+from {
+  transform: translate3d(0, 0, 0);
+}
+to {
+  transform: translate3d(0, 3px, 0);
+}
+}
+
+@-webkit-keyframes bounce {
+from {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+to {
+  -webkit-transform: translate3d(0, 3px, 0);
+  transform: translate3d(0, 3px, 0);
+}
+}
+.spinner {
+    position: relative;
+    width: 35.2px;
+    height: 35.2px;
+  }
+  
+  .spinner::before,
+  .spinner::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    animation: spinner-b4c8mmhg 0.5s backwards, spinner-49opz7hg 1.25s 0.5s infinite ease;
+    border: 8.8px solid #000000;
+    border-radius: 50%;
+    box-shadow: 0 -52.8px 0 -8.8px #000000;
+    position: absolute;
+  }
+  
+  .spinner::after {
+    animation-delay: 0s, 1.25s;
+  }
+  
+  @keyframes spinner-b4c8mmhg {
+    from {
+      box-shadow: 0 0 0 -8.8px #000000;
+    }
+  }
+  
+  @keyframes spinner-49opz7hg {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
