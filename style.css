@@ -108,7 +108,9 @@
      text-decoration: none;
  }	
  .case-study-wrapper .case-study-name.active a {
-     color: #fff;
+    background: -webkit-linear-gradient(#f19872, #e86c9a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
  }
  .case-study-wrapper .case-study-name a:before {
      position: absolute;
@@ -530,6 +532,7 @@
 	left:0;
 	top: 40px;
 	cursor: pointer;
+    border: solid 2px #ffffff;
 }
 .logo-wrap a {
 	cursor: pointer;
@@ -541,7 +544,11 @@
 	letter-spacing: 2px;
 	color: #fff;
 	transition : all 0.3s ease-out;
+    background: -webkit-linear-gradient(#f19872, #e86c9a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
 .logo-wrap a span{ 
 	color: #8167a9;
 }
@@ -569,7 +576,8 @@
 	height: 2px;
 	width: 30px;
 	display: block;
-	background-color: #fff;
+	background: -webkit-linear-gradient(#f19872, #e86c9a);
+      
 	margin-bottom: 7px;
 	cursor: pointer;
 	-webkit-transition: background-color .5s ease, -webkit-transform .2s ease;
@@ -847,9 +855,9 @@ body.nav-active .nav__list-item:nth-child(10) {
      transition: all 300ms linear; 
      text-decoration: none;
      
-     background: -webkit-linear-gradient(#ffffff, #000000);
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
+     background: -webkit-linear-gradient(#f19872, #e86c9a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .edittt{
     position: relative;
@@ -872,7 +880,7 @@ body.nav-active .nav__list-item:nth-child(10) {
     transition: all 300ms linear; 
     text-decoration: none;
     
-    background: -webkit-linear-gradient(#000000, #ffffff);
+    background: -webkit-linear-gradient(#f19872, #e86c9a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -897,7 +905,7 @@ body.nav-active .nav__list-item:nth-child(10) {
     transition: all 300ms linear; 
     text-decoration: none;
     
-    background: -webkit-linear-gradient(#ffffff, #000000);
+    background: -webkit-linear-gradient(#f19872, #e86c9a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -925,7 +933,7 @@ body.nav-active .nav__list-item:nth-child(10) {
     transition: all 300ms linear; 
     text-decoration: none;
     
-    background: -webkit-linear-gradient(#ffffff, #000000);
+    background: -webkit-linear-gradient(#f19872, #e86c9a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 

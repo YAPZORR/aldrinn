@@ -109,6 +109,8 @@ a:hover {
 	left:0;
 	top: 40px;
 	cursor: pointer;
+  border: solid 2px #ffffff;
+ 
 }
 .logo-wrap a {
 	cursor: pointer;
@@ -120,9 +122,15 @@ a:hover {
 	letter-spacing: 2px;
 	color: #fff;
 	transition : all 0.3s ease-out;
+  border: solid 2px #fff;
+ 
+  background: -webkit-linear-gradient(#f19872, #e86c9a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
 }
 .logo-wrap a span{ 
-	color: #8167a9;
+	color: #000000;
 }
 .logo-wrap a:hover {
 	opacity: 0.9;

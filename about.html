@@ -1,625 +1,891 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ALDRIN | ABOUT</title>
-  <link rel="stylesheet" href="about.css">
-	<link rel="icon" href="https://st2.depositphotos.com/3867453/6216/v/950/depositphotos_62166491-stock-illustration-letter-a-logo-icon-design.jpg" type="image/x-icon">
-  
-  
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALDRIN | ABOUT</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="about.css" />
+    
+    <script src="https://kit.fontawesome.com/a11b4a0d33.js" crossorigin="anonymous"></script>
+    <link
+      rel="icon"
+      href="https://st2.depositphotos.com/3867453/6216/v/950/depositphotos_62166491-stock-illustration-letter-a-logo-icon-design.jpg"
+      type="image/x-icon"
+    />
+  </head>
 
-
-<style>
-  .loader-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-
-.loader {
-    --path: #ffffff;
-    --dot: #5628ee;
-    --duration: 3s;
-    width: 44px;
-    height: 44px;
-    position: relative;
-  }
-
-  .loader:before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    position: absolute;
-    display: block;
-    background: var(--dot);
-    top: 37px;
-    left: 19px;
-    transform: translate(-18px, -18px);
-    animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-  }
-
-  .loader svg {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
-  .loader svg rect,
-  .loader svg polygon,
-  .loader svg circle {
-    fill: none;
-    stroke: var(--path);
-    stroke-width: 10px;
-    stroke-linejoin: round;
-    stroke-linecap: round;
-  }
-
-  .loader svg polygon {
-    stroke-dasharray: 145 76 145 76;
-    stroke-dashoffset: 0;
-    animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-  }
-
-  .loader svg rect {
-    stroke-dasharray: 192 64 192 64;
-    stroke-dashoffset: 0;
-    animation: pathRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-  }
-
-  .loader svg circle {
-    stroke-dasharray: 150 50 150 50;
-    stroke-dashoffset: 75;
-    animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-  }
-
-  .loader.triangle {
-    width: 48px;
-  }
-
-  .loader.triangle:before {
-    left: 21px;
-    transform: translate(-10px, -18px);
-    animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-  }
-
-  @keyframes pathTriangle {
-    33% {
-      stroke-dashoffset: 74;
+  <style>
+    .loader-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
     }
 
-    66% {
-      stroke-dashoffset: 147;
+    .loader {
+      --path: #ffffff;
+      --dot: #5628ee;
+      --duration: 3s;
+      width: 44px;
+      height: 44px;
+      position: relative;
     }
 
-    100% {
-      stroke-dashoffset: 221;
-    }
-  }
-
-  @keyframes dotTriangle {
-    33% {
-      transform: translate(0, 0);
-    }
-
-    66% {
-      transform: translate(10px, -18px);
-    }
-
-    100% {
-      transform: translate(-10px, -18px);
-    }
-  }
-
-  @keyframes pathRect {
-    25% {
-      stroke-dashoffset: 64;
-    }
-
-    50% {
-      stroke-dashoffset: 128;
-    }
-
-    75% {
-      stroke-dashoffset: 192;
-    }
-
-    100% {
-      stroke-dashoffset: 256;
-    }
-  }
-
-  @keyframes dotRect {
-    25% {
-      transform: translate(0, 0);
-    }
-
-    50% {
-      transform: translate(18px, -18px);
-    }
-
-    75% {
-      transform: translate(0, -36px);
-    }
-
-    100% {
+    .loader:before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      position: absolute;
+      display: block;
+      background: var(--dot);
+      top: 37px;
+      left: 19px;
       transform: translate(-18px, -18px);
-    }
-  }
-
-  @keyframes pathCircle {
-    25% {
-      stroke-dashoffset: 125;
+      animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+        infinite;
     }
 
-    50% {
-      stroke-dashoffset: 175;
+    .loader svg {
+      display: block;
+      width: 100%;
+      height: 100%;
     }
 
-    75% {
-      stroke-dashoffset: 225;
+    .loader svg rect,
+    .loader svg polygon,
+    .loader svg circle {
+      fill: none;
+      stroke: var(--path);
+      stroke-width: 10px;
+      stroke-linejoin: round;
+      stroke-linecap: round;
     }
 
-    100% {
-      stroke-dashoffset: 275;
+    .loader svg polygon {
+      stroke-dasharray: 145 76 145 76;
+      stroke-dashoffset: 0;
+      animation: pathTriangle var(--duration)
+        cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
     }
-  }
 
-  .loader {
-    display: inline-block;
-    margin: 0 16px;
-    
-  }
-  #content.hidden {
-    display: none;
-  }
-</style>
-<body onload="removeHtmlExtension()">
+    .loader svg rect {
+      stroke-dasharray: 192 64 192 64;
+      stroke-dashoffset: 0;
+      animation: pathRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+        infinite;
+    }
 
+    .loader svg circle {
+      stroke-dasharray: 150 50 150 50;
+      stroke-dashoffset: 75;
+      animation: pathCircle var(--duration)
+        cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+    }
 
-  <div class="loader-container loader-center">
+    .loader.triangle {
+      width: 48px;
+    }
 
-    <div class="loader">
+    .loader.triangle:before {
+      left: 21px;
+      transform: translate(-10px, -18px);
+      animation: dotTriangle var(--duration)
+        cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+    }
+
+    @keyframes pathTriangle {
+      33% {
+        stroke-dashoffset: 74;
+      }
+
+      66% {
+        stroke-dashoffset: 147;
+      }
+
+      100% {
+        stroke-dashoffset: 221;
+      }
+    }
+
+    @keyframes dotTriangle {
+      33% {
+        transform: translate(0, 0);
+      }
+
+      66% {
+        transform: translate(10px, -18px);
+      }
+
+      100% {
+        transform: translate(-10px, -18px);
+      }
+    }
+
+    @keyframes pathRect {
+      25% {
+        stroke-dashoffset: 64;
+      }
+
+      50% {
+        stroke-dashoffset: 128;
+      }
+
+      75% {
+        stroke-dashoffset: 192;
+      }
+
+      100% {
+        stroke-dashoffset: 256;
+      }
+    }
+
+    @keyframes dotRect {
+      25% {
+        transform: translate(0, 0);
+      }
+
+      50% {
+        transform: translate(18px, -18px);
+      }
+
+      75% {
+        transform: translate(0, -36px);
+      }
+
+      100% {
+        transform: translate(-18px, -18px);
+      }
+    }
+
+    @keyframes pathCircle {
+      25% {
+        stroke-dashoffset: 125;
+      }
+
+      50% {
+        stroke-dashoffset: 175;
+      }
+
+      75% {
+        stroke-dashoffset: 225;
+      }
+
+      100% {
+        stroke-dashoffset: 275;
+      }
+    }
+
+    .loader {
+      display: inline-block;
+      margin: 0 16px;
+    }
+    #content.hidden {
+      display: none;
+    }
+  </style>
+  <body onload="removeHtmlExtension()">
+    <div class="loader-container loader-center">
+      <div class="loader">
         <svg viewBox="0 0 80 80">
-            <circle id="test" cx="40" cy="40" r="32"></circle>
+          <circle id="test" cx="40" cy="40" r="32"></circle>
         </svg>
-    </div>
-    
-    <div class="loader triangle">
+      </div>
+
+      <div class="loader triangle">
         <svg viewBox="0 0 86 80">
-            <polygon points="43 8 79 72 7 72"></polygon>
+          <polygon points="43 8 79 72 7 72"></polygon>
         </svg>
-    </div>
-    
-    <div class="loader">
+      </div>
+
+      <div class="loader">
         <svg viewBox="0 0 80 80">
-            <rect x="8" y="8" width="64" height="64"></rect>
+          <rect x="8" y="8" width="64" height="64"></rect>
         </svg>
+      </div>
     </div>
 
-
-</div>
-
-  <div id="content"class="hidden">
-	<header class="cd-header">
-		<div class="header-wrapper">
-			<div class="logo-wrap">
-				<a href="#" class="hover-target"><span>Ald</span>Rin</a>
-        <div class="section full-height over-hide">	
-          <div class="switch-wrap">
-            <!-- <h1>Embracing life's vibrant hues.</h1> -->
-            <div id="switch" class="hover-target">
-              <div id="circle"></div>
-            </div >
-            <p><span>dark</span> - <span>light</span></p>
+    <div id="content" class="hidden">
+      <header class="cd-header">
+        <div class="header-wrapper">
+          <div class="logo-wrap">
+            <a href="#" class="hover-target"><span>Ald</span>Rin</a>
+            <div class="section full-height over-hide">
+              <div class="switch-wrap">
+                <!-- <h1>Embracing life's vibrant hues.</h1> -->
+                <div id="switch" class="hover-target">
+                  <div id="circle"></div>
+                </div>
+                <p><span>dark</span> - <span>light</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="nav-but-wrap">
+            <div class="menu-icon hover-target">
+              <span class="menu-icon__line menu-icon__line-left"></span>
+              <span class="menu-icon__line"></span>
+              <span class="menu-icon__line menu-icon__line-right"></span>
+            </div>
           </div>
         </div>
-			</div>
-			<div class="nav-but-wrap">
-				<div class="menu-icon hover-target">
-					<span class="menu-icon__line menu-icon__line-left"></span>
-					<span class="menu-icon__line"></span>
-					<span class="menu-icon__line menu-icon__line-right"></span>
-				</div>					
-			</div>					
-		</div>				
-	</header>
+      </header>
 
-	<div class="nav">
-		<div class="nav__content">
-			<ul class="nav__list">
-				<li class="nav__list-item "><a href="index.html" class="hover-target">home</a></li>
-				<li class="nav__list-item active-nav"><a href="#" class="hover-target">About</a></li>
-				
-				<li class="nav__list-item"><a href="contact.html" class="hover-target">contact</a></li>
-			</ul>
-		</div>
-	</div>		
+      <div class="nav">
+        <div class="nav__content">
+          <ul class="nav__list">
+            <li class="nav__list-item">
+              <a href="index.html" class="hover-target">home</a>
+            </li>
+            <li class="nav__list-item active-nav">
+              <a href="#" class="hover-target">About</a>
+            </li>
 
-	<div class="section full-height over-hide">	
-		<div class="switch-wrap">
-		
-			<!-- <div id="switch" class="hover-target">
+            <li class="nav__list-item">
+              <a href="contact.html" class="hover-target">contact me</a>
+            </li>
+          </ul>
+          <hr>
+          <div class="row">
+            <div class="col-4 nav__list-item"><a href=""><h5 class="foot">Aldrin Eyana <br> <em >09518189613</em></h5></a>	 </div>
+                <div class="col-4 nav__list-item" > <a href=""><h5 >agusan del sur <br> <em>sanfrancisco</em> </h5></a> </div>
+                
+                <div class="col-4  nav__list-item">
+                    <a href="https://www.facebook.com/aldrineyana98"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            
+
+        </div>
+        </div>
+      </div>
+
+      <div class="section full-height over-hide">
+        <div class="switch-wrap">
+          <!-- <div id="switch" class="hover-target">
 				<div id="circle"></div>
 			</div > -->
-			<!-- <p><span>dark</span> - <span>light</span></p> -->
-		</div>
-	</div>	
-
-
-  <ul class="case-study-wrapper">
-    <div class="section">
-      <li class="case-study-name">                            	
-        <a   class="hover-target embrace">Embracing life's vibrant hues.</a>
-    </li>
-    </div>
-    
-    <!-- <li class="case-study-name">                                         	
-        <a href="#" class="hover-target">Projects</a>
-    </li> -->
-    
-   
-</ul>
-
-
-
-
-
-
-
-<ul class="case-study-images">
-  <li>
-      <div class="img-hero-background">
-
-          <span>
-              <img src="images/EYANA, ALDRIN T _40A3554.JPG" alt="">
-          </span> 
-         
-          <span>
-              <img class="pic" src="images/EYANA, ALDRIN T _40A3618.JPG" alt="">
-              
-          </span> 
-        
-          <span>
-              
-          </span> 
-
-         
-         
-      </div> 
-      <div class="hero-number-back"></div> 
-      <div class="hero-number"></div> 
-      <div class="hero-number-fixed"></div> 
-  </li>
-  <li>
-      <div class="img-hero-background">
-          <span>
-              <img src="images/web-project-2.png" alt="">
-            
-          </span> 
-          <span>
-              <img src="images/Screenshot 2023-06-14 115437.png" alt="">
-          </span> 
-          <span>
-              <img src="images/mobile-project-2.png" alt="">
-          </span> 
-          <span>
-              <img src="images/ui-project-1.png" alt="">
-          </span> 
-      </div> 
-      <div class="hero-number-back">02</div> 
-      <div class="hero-number">02</div>  
-  </li>
-  <li>
-      <div class="img-hero-background">
-          <span>
-              <img src="images/css-logo.png" alt="">
-          </span> 
-          <span>
-              <img src="images/HTML5_logo_and_wordmark.svg.png" alt="">
-          </span> 
-          <span>
-              <img src="images/5847ea22cef1014c0b5e4833.png" alt="">
-          </span> 
-          <span class="badges">
-             
-              <h1 class="editts">Video Editing</h1>
-          </span>
-      </div>
-      <div class="hero-number-back">03</div>  
-      <div class="hero-number">03</div> 
-  </li>
-  <li>
-      <div class="img-hero-background">
-         
-
-
-          <span class="badge">
-              <span class="badge-text">Current</span>
-              <h1 class="edit editt">Video <br> Editor</h1>
-          </span>
-
-          <span class="badgee">
-              <span class="badgee-text">Current</span>
-              <h1 class=" edittt">UI/UX <br> Designer</h1>
-          </span>
-          <span class="badgeee">
-             
-          </span>
-          <span class="badgeee">
-              <span class="badgeee-text">Current</span>
-              <h1 class=" editttt">Photo <br> Editor</h1>
-          </span>
-          
-          
-
-          
-          
-      </div> 
-      <div class="hero-number-back">04</div> 
-      <div class="hero-number">04</div> 
-  </li>
-</ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="tabs">
-    <div class="tab-2">
-      <label for="tab2-1">Website Projects</label>
-      <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
-      <div>
-        <div class="section-fluid-main">
-          <div class="section-row">
-            <div class="section-col">
-              <div class="section">
-                <div class="section-in">
-                  <img src="images/mobile-project-2.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="hover-text">
-              <h2>ilvPet Clone Web</h2>
-            </div>
-            <div class="section-col">
-              <div class="section">
-                <div class="section-in">
-                  <img src="images/ui-project-1.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="hover-text">
-              <h2>Capstone Project</h2>
-            </div>
-            <div class="section-col">
-              <div class="section">
-                <div class="section-in">
-                  <img src="images/web-project-2.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="hover-text">
-              <h2>Online Appoinment System</h2>
-            </div>
-            <div class="section-col">
-              <div class="section">
-                <div class="section-in">
-                  <img src="images/Screenshot 2023-06-14 115509.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="hover-text">
-              <h2>ilvPet Clone Web</h2>
-            </div>
-            <div class="section-col">
-              <div class="section">
-                <div class="section-in">
-                  <img src="images/system.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="hover-text">
-              <h2>Systems Clone Web</h2>
-            </div>
-            <div class="section-col">
-              <div class="section">
-                <div class="section-in">
-                  <img src="images/system2.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="hover-text">
-              <h2>Systems Clone Web</h2>
-            </div>
-          </div>
-      
-        
+          <!-- <p><span>dark</span> - <span>light</span></p> -->
         </div>
       </div>
-    </div>
-    <div class="tab-2">
-      <label class="tabb" for="tab2-2">Videos</label>
-      <input id="tab2-2" name="tabs-two" type="radio">
-      <div>
-        <iframe class="vid" src="https://www.youtube.com/embed/kbdXke6KgtU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe class="vid" src="https://www.youtube.com/embed/4xJGGeaxE6Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+      <ul class="case-study-wrapper">
+        <div class="section">
+          <li class="case-study-name">
+            <a class="hover-target embrace">Embracing life's vibrant hues.</a>
+          </li>
+        </div>
+
+        <!-- <li class="case-study-name">                                         	
+        <a href="#" class="hover-target">Projects</a>
+    </li> -->
+      </ul>
+
+      <ul class="case-study-images">
+        <li>
+          <div class="img-hero-background">
+            <span>
+              <img src="images/EYANA, ALDRIN T _40A3554.JPG" alt="" />
+            </span>
+
+            <span>
+              <img
+                class="pic"
+                src="images/EYANA, ALDRIN T _40A3618.JPG"
+                alt=""
+              />
+            </span>
+
+            <span> </span>
+          </div>
+          <div class="hero-number-back"></div>
+          <div class="hero-number"></div>
+          <div class="hero-number-fixed"></div>
+        </li>
+        <li>
+          <div class="img-hero-background">
+            <span>
+              <img src="images/web-project-2.png" alt="" />
+            </span>
+            <span>
+              <img src="images/Screenshot 2023-06-14 115437.png" alt="" />
+            </span>
+            <span>
+              <img src="images/mobile-project-2.png" alt="" />
+            </span>
+            <span>
+              <img src="images/ui-project-1.png" alt="" />
+            </span>
+          </div>
+          <div class="hero-number-back">02</div>
+          <div class="hero-number">02</div>
+        </li>
+        <li>
+          <div class="img-hero-background">
+            <span>
+              <img src="images/css-logo.png" alt="" />
+            </span>
+            <span>
+              <img src="images/HTML5_logo_and_wordmark.svg.png" alt="" />
+            </span>
+            <span>
+              <img src="images/5847ea22cef1014c0b5e4833.png" alt="" />
+            </span>
+            <span class="badges">
+              <h1 class="editts">Video Editing</h1>
+            </span>
+          </div>
+          <div class="hero-number-back">03</div>
+          <div class="hero-number">03</div>
+        </li>
+        <li>
+          <div class="img-hero-background">
+            <span class="badge">
+              <span class="badge-text">Current</span>
+              <h1 class="edit editt">
+                Video <br />
+                Editor
+              </h1>
+            </span>
+
+            <span class="badgee">
+              <span class="badgee-text">Current</span>
+              <h1 class="edittt">
+                UI/UX <br />
+                Designer
+              </h1>
+            </span>
+            <span class="badgeee"> </span>
+            <span class="badgeee">
+              <span class="badgeee-text">Current</span>
+              <h1 class="editttt">
+                Photo <br />
+                Editor
+              </h1>
+            </span>
+          </div>
+          <div class="hero-number-back">04</div>
+          <div class="hero-number">04</div>
+        </li>
+      </ul>
+
+      <div id="tabs" class="tabs">
+        <div class="tab-2">
+          <label  for="tab2-1">Website Projects
+            
+          </label>
+          <input id="tab2-1" name="tabs-two" type="radio" checked="checked" />
+          <div>
+            <div class="section-fluid-main">
+              <h2 class="line"><em>Click each image to go to the site</em></h2>
+              <div class="section-row">
+                <div class="section-col">
+                  <div class="section">
+                    <div class="section-in">
+                      <a
+                        href="https://yapzorr.github.io/ilvpet/"
+                        target="_blank"
+                      >
+                        <img src="images/mobile-project-2.png" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>ilvPet Clone Web</h2>
+                </div>
+                <div class="section-col">
+                  <div class="section">
+                    <div class="section-in">
+                      <img
+                        src="images/Screenshot 2023-06-14 115509.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>ilvPet Clone Web</h2>
+                </div>
+                <div class="section-col">
+                  <div class="section">
+                    <div class="section-in">
+                      <a
+                        href="https://app.dinagatislandtour.com/"
+                        target="_blank"
+                      >
+                        <img src="images/web-project-2.png" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Online Appoinment System</h2>
+                </div>
+                <div class="section-col">
+                  <div class="section">
+                    <div class="section-in">
+                      <img src="images/ui-project-1.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Capstone Project</h2>
+                </div>
+
+                <div class="section-col">
+                  <div class="section">
+                    <div class="section-in">
+                      <a
+                        href="  https://yapzorr.github.io/system/"
+                        target="_blank"
+                      >
+                        <img src="images/system.png" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Systems Clone Web</h2>
+                </div>
+                <div class="section-col">
+                  <div class="section">
+                    <div class="section-in">
+                      <img src="images/system2.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Systems Clone Web</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-2">
+          <label class="tabb" for="tab2-2">UI/UX Projects</label>
+          <input id="tab2-2" name="tabs-two" type="radio" />
+          <div>
+            <div class="section-fluid-main">
+              <h2 class="line"><em>Click each image to go to the site</em></h2>
+              <div class="section-row">
+
+                <hr class="style18">
+
+                <div class="section-col">
+                  <div class="section">
+                    <div class="section-in">
+                      <a
+                        href="https://www.figma.com/file/fQZMfpxAQGxCwzu4CcjwCC/Prototyping-in-Figma?type=design&node-id=0:1&mode=design&t=cw99eaKxA1CYX2kf-1"
+                        target="_blank"
+                      >
+                        <img src="images/d1.png" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Delivery app</h2>
+                </div>
+                <div class="section-col">
+                  <div class="section">
+                    <div class="section-in">
+                      <a
+                        href="https://www.figma.com/file/fQZMfpxAQGxCwzu4CcjwCC/Prototyping-in-Figma?type=design&node-id=0:1&mode=design&t=cw99eaKxA1CYX2kf-1"
+                        target="_blank"
+                      >
+                      <img
+                        src="images/d2.png"
+                        alt=""
+                      />
+                    </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Delivery app</h2>
+                </div>
+                <div class="section-col sec">
+                  <div class="section">
+                    <div class="section-in">
+                      <a
+                        href="https://www.figma.com/file/fQZMfpxAQGxCwzu4CcjwCC/Prototyping-in-Figma?type=design&node-id=0:1&mode=design&t=cw99eaKxA1CYX2kf-1"
+                        target="_blank"
+                      >
+                        <img src="images/d3.png" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Delivery app</h2>
+                </div>
+                <div class="section-col sec">
+                  <div class="section">
+                    <div class="section-in">
+                      <a
+                        href="https://www.figma.com/file/fQZMfpxAQGxCwzu4CcjwCC/Prototyping-in-Figma?type=design&node-id=0:1&mode=design&t=cw99eaKxA1CYX2kf-1"
+                        target="_blank"
+                      >
+                      <img src="images/d4.png" alt="" />
+                    </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Delivery app</h2>
+                </div>
+
+            
+
+
+                <div class="section-col">
+                  <div class="section">
+                    <div class="section-in">
+                      <a
+                        href="https://www.figma.com/file/uHVFiERQONKQ1L47pgEMds/Food-Ordering-app-by-Blackhole-Design?type=design&node-id=33:133&mode=design&t=cw99eaKxA1CYX2kf-1"
+                        target="_blank"
+                      >
+                        <img src="images/r1.png" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Food Ordering App</h2>
+                </div>
+                <div class="section-col">
+                  <div class="section">
+                    <div class="section-in">
+                      <a
+                        href="https://www.figma.com/file/uHVFiERQONKQ1L47pgEMds/Food-Ordering-app-by-Blackhole-Design?type=design&node-id=33:133&mode=design&t=cw99eaKxA1CYX2kf-1"
+                        target="_blank"
+                      >
+                      <img
+                        src="images/r2.png"
+                        alt=""
+                      />
+                    </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Food Ordering App</h2>
+                </div>
+                <div class="section-col sec">
+                  <div class="section">
+                    <div class="section-in">
+                      <a
+                        href="https://www.figma.com/file/uHVFiERQONKQ1L47pgEMds/Food-Ordering-app-by-Blackhole-Design?type=design&node-id=33:133&mode=design&t=cw99eaKxA1CYX2kf-1"
+                        target="_blank"
+                      >
+                        <img src="images/r3.png" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Food Ordering App</h2>
+                </div>
+                <div class="section-col sec">
+                  <div class="section">
+                    <div class="section-in">
+                      <a
+                        href="https://www.figma.com/file/uHVFiERQONKQ1L47pgEMds/Food-Ordering-app-by-Blackhole-Design?type=design&node-id=33:133&mode=design&t=cw99eaKxA1CYX2kf-1"
+                        target="_blank"
+                      >
+                      <img src="images/r4.png" alt="" />
+                    </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Food Ordering App</h2>
+                </div>
+              
+
+
+
+                <div class="section-col ">
+                  <div class="section">
+                    <div class="section-in">
+                      <a
+                        href="https://www.figma.com/file/McNPjXFrnvmhcYbqTEu0jO/My-Pet-CARE?type=design&node-id=0:1&mode=design&t=PYzgc59EtZfnW5hD-1"
+                        target="_blank"
+                      >
+                        <img src="images/p1.png" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Pet Care App</h2>
+                </div>
+                <div class="section-col">
+                  <div class="section">
+                    <div class="section-in">
+                      <a
+                        href="https://www.figma.com/file/McNPjXFrnvmhcYbqTEu0jO/My-Pet-CARE?type=design&node-id=0:1&mode=design&t=PYzgc59EtZfnW5hD-1"
+                        target="_blank"
+                      >
+                      <img
+                        src="images/p2.png"
+                        alt=""
+                      />
+                    </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Pet Care App</h2>
+                </div>
+                <div class="section-col sec">
+                  <div class="section">
+                    <div class="section-in">
+                      <a
+                        href="https://www.figma.com/file/McNPjXFrnvmhcYbqTEu0jO/My-Pet-CARE?type=design&node-id=0:1&mode=design&t=PYzgc59EtZfnW5hD-1"
+                        target="_blank"
+                      >
+                        <img src="images/p3.png" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Pet Care App</h2>
+                </div>
+                <div class="section-col sec">
+                  <div class="section">
+                    <div class="section-in">
+                      <a
+                        href="https://www.figma.com/file/McNPjXFrnvmhcYbqTEu0jO/My-Pet-CARE?type=design&node-id=0:1&mode=design&t=PYzgc59EtZfnW5hD-1"
+                        target="_blank"
+                      >
+                      <img src="images/p4.png" alt="" />
+                    </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Pet Care App</h2>
+                </div>
+
+
+                <div class="section-col">
+                  <div class="section">
+                    <div class="section-in">
+                      <a
+                        href="https://www.figma.com/file/CjnqSR12LjaLFu5KHfDGLu/Untitled?type=design&mode=design&t=PYzgc59EtZfnW5hD-1"
+                        target="_blank"
+                      >
+                        <img src="images/v1.png" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Web App</h2>
+                </div>
+                <div class="section-col">
+                  <div class="section">
+                    <div class="section-in">
+                      <a
+                        href="https://www.figma.com/file/CjnqSR12LjaLFu5KHfDGLu/Untitled?type=design&mode=design&t=PYzgc59EtZfnW5hD-1"
+                        target="_blank"
+                      >
+                      <img
+                        src="images/v2.png"
+                        alt=""
+                      />
+                    </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Web App</h2>
+                </div>
+                <div class="section-col">
+                  <div class="section">
+                    <div class="section-in">
+                      <a
+                        href="https://www.figma.com/file/CjnqSR12LjaLFu5KHfDGLu/Untitled?type=design&mode=design&t=PYzgc59EtZfnW5hD-1"
+                        target="_blank"
+                      >
+                        <img src="images/v3.png" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Web App</h2>
+                </div>
+                <div class="section-col">
+                  <div class="section">
+                    <div class="section-in">
+                      <a
+                        href="https://www.figma.com/file/CjnqSR12LjaLFu5KHfDGLu/Untitled?type=design&mode=design&t=PYzgc59EtZfnW5hD-1"
+                        target="_blank"
+                      >
+                      <img src="images/v4.png" alt="" />
+                    </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hover-text">
+                  <h2>Web App</h2>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div class="cursor" id="cursor"></div>
+      <div class="cursor2" id="cursor2"></div>
+      <div class="cursor3" id="cursor3"></div>
     </div>
-  </div>
-
-
-
-
-
-
-
- 
-	
-	<div class='cursor' id="cursor"></div>
-	<div class='cursor2' id="cursor2"></div>
-	<div class='cursor3' id="cursor3"></div>
-  </div>
-<!-- Link to page
+    <!-- Link to page
 ================================================== -->
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	
-	<script>
-		   // Wait for the page to load
-       document.addEventListener("DOMContentLoaded", function() {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+      // Wait for the page to load
+      document.addEventListener("DOMContentLoaded", function () {
         // Show the loader for 2-3 seconds
-        setTimeout(function() {
-            // Hide the loader
-            document.querySelector(".loader-container").style.display = "none";
-            // Show the page content
-            document.getElementById("content").style.display = "block";
+        setTimeout(function () {
+          // Hide the loader
+          document.querySelector(".loader-container").style.display = "none";
+          // Show the page content
+          document.getElementById("content").style.display = "block";
         }, 3000); // Adjust the duration here (in milliseconds)
-    });
-
-
-/* Please ❤ this if you like it! */
-
-
-(function($) { "use strict";
-		
-    //Page cursors
-  
-      document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
-          t.style.left = n.clientX + "px", 
-      t.style.top = n.clientY + "px", 
-      e.style.left = n.clientX + "px", 
-      e.style.top = n.clientY + "px", 
-      i.style.left = n.clientX + "px", 
-      i.style.top = n.clientY + "px"
       });
-      var t = document.getElementById("cursor"),
+
+      /* Please ❤ this if you like it! */
+
+      (function ($) {
+        "use strict";
+
+        //Page cursors
+
+        document
+          .getElementsByTagName("body")[0]
+          .addEventListener("mousemove", function (n) {
+            (t.style.left = n.clientX + "px"),
+              (t.style.top = n.clientY + "px"),
+              (e.style.left = n.clientX + "px"),
+              (e.style.top = n.clientY + "px"),
+              (i.style.left = n.clientX + "px"),
+              (i.style.top = n.clientY + "px");
+          });
+        var t = document.getElementById("cursor"),
           e = document.getElementById("cursor2"),
           i = document.getElementById("cursor3");
-      function n(t) {
-          e.classList.add("hover"), i.classList.add("hover")
-      }
-      function s(t) {
-          e.classList.remove("hover"), i.classList.remove("hover")
-      }
-      s();
-      for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
-          o(r[a])
-      }
-      function o(t) {
-          t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
-      }
-    
-    //Navigation
-  
-    var app = function () {
-      var body = undefined;
-      var menu = undefined;
-      var menuItems = undefined;
-      var init = function init() {
-        body = document.querySelector('body');
-        menu = document.querySelector('.menu-icon');
-        menuItems = document.querySelectorAll('.nav__list-item');
-        applyListeners();
-      };
-      var applyListeners = function applyListeners() {
-        menu.addEventListener('click', function () {
-          return toggleClass(body, 'nav-active');
+        function n(t) {
+          e.classList.add("hover"), i.classList.add("hover");
+        }
+        function s(t) {
+          e.classList.remove("hover"), i.classList.remove("hover");
+        }
+        s();
+        for (
+          var r = document.querySelectorAll(".hover-target"), a = r.length - 1;
+          a >= 0;
+          a--
+        ) {
+          o(r[a]);
+        }
+        function o(t) {
+          t.addEventListener("mouseover", n), t.addEventListener("mouseout", s);
+        }
+
+        //Navigation
+
+        var app = (function () {
+          var body = undefined;
+          var menu = undefined;
+          var menuItems = undefined;
+          var init = function init() {
+            body = document.querySelector("body");
+            menu = document.querySelector(".menu-icon");
+            menuItems = document.querySelectorAll(".nav__list-item");
+            applyListeners();
+          };
+          var applyListeners = function applyListeners() {
+            menu.addEventListener("click", function () {
+              return toggleClass(body, "nav-active");
+            });
+          };
+          var toggleClass = function toggleClass(element, stringClass) {
+            if (element.classList.contains(stringClass))
+              element.classList.remove(stringClass);
+            else element.classList.add(stringClass);
+          };
+          init();
+        })();
+
+        //Switch light/dark
+
+        $("#switch").on("click", function () {
+          if ($("body").hasClass("light")) {
+            $("body").removeClass("light");
+            $("#switch").removeClass("switched");
+          } else {
+            $("body").addClass("light");
+            $("#switch").addClass("switched");
+          }
         });
-      };
-      var toggleClass = function toggleClass(element, stringClass) {
-        if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else element.classList.add(stringClass);
-      };
-      init();
-    }();
-  
-    
-    //Switch light/dark
-    
-    $("#switch").on('click', function () {
-      if ($("body").hasClass("light")) {
-        $("body").removeClass("light");
-        $("#switch").removeClass("switched");
-      }
-      else {
-        $("body").addClass("light");
-        $("#switch").addClass("switched");
-      }
-    });
-    
-  })(jQuery); 
+      })(jQuery);
 
+      $(document).ready(function () {
+        /* Hero Case study images */
 
-  $(document).ready(function() {
-		
-		/* Hero Case study images */			
-		
-		$('.case-study-name:nth-child(1)').on('mouseenter', function() {
-			$('.case-study-name.active').removeClass('active');
-			$('.case-study-images li.show').removeClass("show");
-			$('.case-study-images li:nth-child(1)').addClass("show");
-			$('.case-study-name:nth-child(1)').addClass('active');
-		})
-		$('.case-study-name:nth-child(2)').on('mouseenter', function() {
-			$('.case-study-name.active').removeClass('active');
-			$('.case-study-images li.show').removeClass("show");
-			$('.case-study-images li:nth-child(2)').addClass("show");
-			$('.case-study-name:nth-child(2)').addClass('active');
-		})
-		$('.case-study-name:nth-child(3)').on('mouseenter', function() {
-			$('.case-study-name.active').removeClass('active');
-			$('.case-study-images li.show').removeClass("show");
-			$('.case-study-images li:nth-child(3)').addClass("show");
-			$('.case-study-name:nth-child(3)').addClass('active');
-		})
-		$('.case-study-name:nth-child(4)').on('mouseenter', function() {
-			$('.case-study-name.active').removeClass('active');
-			$('.case-study-images li.show').removeClass("show");
-			$('.case-study-images li:nth-child(4)').addClass("show");
-			$('.case-study-name:nth-child(4)').addClass('active');
-		})
-		$('.case-study-name:nth-child(1)').trigger('mouseenter')   
-   });  
-   function removeHtmlExtension() {
-    var links = document.getElementsByTagName('a');
-    for (var i = 0; i < links.length; i++) {
-      var href = links[i].getAttribute('href');
-      if (href.endsWith('.html')) {
-        links[i].setAttribute('href', href.slice(0, -5));
+        $(".case-study-name:nth-child(1)").on("mouseenter", function () {
+          $(".case-study-name.active").removeClass("active");
+          $(".case-study-images li.show").removeClass("show");
+          $(".case-study-images li:nth-child(1)").addClass("show");
+          $(".case-study-name:nth-child(1)").addClass("active");
+        });
+        $(".case-study-name:nth-child(2)").on("mouseenter", function () {
+          $(".case-study-name.active").removeClass("active");
+          $(".case-study-images li.show").removeClass("show");
+          $(".case-study-images li:nth-child(2)").addClass("show");
+          $(".case-study-name:nth-child(2)").addClass("active");
+        });
+        $(".case-study-name:nth-child(3)").on("mouseenter", function () {
+          $(".case-study-name.active").removeClass("active");
+          $(".case-study-images li.show").removeClass("show");
+          $(".case-study-images li:nth-child(3)").addClass("show");
+          $(".case-study-name:nth-child(3)").addClass("active");
+        });
+        $(".case-study-name:nth-child(4)").on("mouseenter", function () {
+          $(".case-study-name.active").removeClass("active");
+          $(".case-study-images li.show").removeClass("show");
+          $(".case-study-images li:nth-child(4)").addClass("show");
+          $(".case-study-name:nth-child(4)").addClass("active");
+        });
+        $(".case-study-name:nth-child(1)").trigger("mouseenter");
+      });
+      function removeHtmlExtension() {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0; i < links.length; i++) {
+          var href = links[i].getAttribute("href");
+          if (href.endsWith(".html")) {
+            links[i].setAttribute("href", href.slice(0, -5));
+          }
+        }
       }
-    }
-  }
 
-  function removeHtmlExtension() {
-    var links = document.getElementsByTagName('a');
-    for (var i = 0; i < links.length; i++) {
-      var href = links[i].getAttribute('href');
-      if (href.endsWith('.html')) {
-        links[i].setAttribute('href', href.slice(0, -5));
+      function removeHtmlExtension() {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0; i < links.length; i++) {
+          var href = links[i].getAttribute("href");
+          if (href.endsWith(".html")) {
+            links[i].setAttribute("href", href.slice(0, -5));
+          }
+        }
       }
-    }
-  }
-	</script>
-</body>
+    </script>
+  </body>
 </html>
